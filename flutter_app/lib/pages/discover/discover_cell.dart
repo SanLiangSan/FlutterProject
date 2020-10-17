@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/discover/discover_child_page.dart';
 
 class DiscoverCell extends StatelessWidget {
   // property
@@ -12,9 +13,14 @@ class DiscoverCell extends StatelessWidget {
   // build
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      height: 54,
+    return GestureDetector(
+      onTap: (){
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (BuildContext context) => DiscoverChildPage(title: '$title')));
+      },
+      child: Container(
+        color: Colors.white,
+        height: 54,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
@@ -42,6 +48,7 @@ class DiscoverCell extends StatelessWidget {
             ),
           ],
         ),
+      )
     );
   }
 }
