@@ -8,10 +8,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'WeChat',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
           highlightColor: Color.fromARGB(1, 0, 0, 0),
           splashColor: Color.fromARGB(1, 0, 0, 0),
-          primarySwatch: Colors.blue,
+          primarySwatch: Colors.blueGrey,
       ),
       home: RootPage(),
     );
